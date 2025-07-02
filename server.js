@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static('.'));
 
 // Configuração do banco SQLite
 const db = new sqlite3.Database('./database.sqlite', (err) => {
@@ -50,7 +50,7 @@ function createTable() {
 // Configuração do Multer para upload de imagens
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        const uploadDir = 'public/uploads';
+        const uploadDir = 'uploads';
         if (!fs.existsSync(uploadDir)) {
             fs.mkdirSync(uploadDir, { recursive: true });
         }
@@ -109,7 +109,7 @@ app.post('/api/cursos', upload.single('imagem'), (req, res) => {
     const { titulo, descricao, link, cargaHoraria, certificado, alunos } = req.body;
     
     // Se foi enviada uma imagem, usar o caminho do arquivo
-    const imagem = req.file ? `/uploads/${req.file.filename}` : req.body.imagem;
+    const imagem = req.file ? `uploads/${req.file.filename}` : req.body.imagem;
     
     if (!titulo || !descricao || !imagem || !link || !cargaHoraria || !certificado) {
         res.status(400).json({ error: 'Todos os campos obrigatórios devem ser preenchidos' });
@@ -145,7 +145,7 @@ app.put('/api/cursos/:id', upload.single('imagem'), (req, res) => {
     // Se foi enviada uma nova imagem, usar o caminho do arquivo
     let imagem = req.body.imagem;
     if (req.file) {
-        imagem = `/uploads/${req.file.filename}`;
+        imagem = `uploads/${req.file.filename}`;
     }
     
     if (!titulo || !descricao || !imagem || !link || !cargaHoraria || !certificado) {
@@ -204,8 +204,8 @@ app.delete('/api/cursos/:id', (req, res) => {
             }
             
             // Se havia uma imagem local, deletar o arquivo
-            if (row.imagem && row.imagem.startsWith('/uploads/')) {
-                const imagePath = path.join(__dirname, 'public', row.imagem);
+            if (row.imagem && row.imagem.startsWith('uploads/')) {
+                const imagePath = path.join(__dirname, row.imagem);
                 if (fs.existsSync(imagePath)) {
                     fs.unlinkSync(imagePath);
                 }
