@@ -1,0 +1,103 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #a855f7; /* Roxo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    background-color: #a855f7; /* Roxo */
+    width: 100vw; /* Ocupa toda a largura da tela */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    position: relative;
+    color: #fff;
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Bandeirinhas no topo */
+.banner {
+    position: absolute;
+    top: 2%; /* Ajustado para porcentagem para manter proporção */
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5vw; /* Ajustado para ser responsivo */
+    display: flex;
+    align-items: center;
+}
+
+.banner::before, .banner::after {
+    content: '🏳️';
+    font-size: 3vw; /* Ajustado para ser responsivo */
+    margin: 0 1vw;
+}
+
+.banner span {
+    margin: 0 0.5vw;
+}
+
+/* Logo no centro do topo (ajustada 20% mais para a direita e para cima) */
+.logo-top {
+    position: absolute;
+    top: 0%; /* Ajustado 20% mais para cima (de 8% para 0%) */
+    left: 70%; /* Ajustado 20% mais para a direita (de 50% para 70%) */
+    transform: translateX(-50%);
+    width: 10vw; /* Ajustado para ser responsivo */
+}
+
+/* Logo no centro da parte inferior (ajustada 20% mais para a direita e para cima) */
+.logo-bottom {
+    position: absolute;
+    bottom: 25%; /* Ajustado 20% mais para cima (de 5% para 25%) */
+    left: 70%; /* Ajustado 20% mais para a direita (de 50% para 70%) */
+    transform: translateX(-50%);
+    width: 10vw; /* Ajustado para ser responsivo */
+}
+
+/* Ícones de redes sociais à esquerda */
+.social-icons {
+    position: absolute;
+    left: 5%; /* Ajustado para porcentagem */
+    top: 20%; /* Ajustado para dar espaço à logo no topo */
+}
+
+.social-icons div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3vh; /* Ajustado para ser responsivo */
+}
+
+.social-icons i {
+    font-size: 2.5vw; /* Ajustado para ser responsivo */
+    margin-right: 1vw;
+}
+
+/* Estilizando os ícones com cores */
+.whatsapp { color: #ff6f91; }
+.instagram { color: #ff6f91; }
+.facebook { color: #ff6f91; }
+.youtube { color: #ff6f91; }
+.tiktok { color: #ff6f91; }
+.email { color: #ff6f91; }
+.website { color: #ff6f91; }
+
+/* Texto ao lado dos ícones */
+.contact-info {
+    position: absolute;
+    left: 10%; /* Ajustado para evitar sobreposição */
+    top: 20%; /* Ajustado para dar espaço à logo no topo */
+}
+
+.contact-info p {
+    margin: 0;
+    font-size: 1.8vw; /* Ajustado para ser responsivo */
+    margin-bottom: 3vh; /* Ajustado para ser responsivo */
+}

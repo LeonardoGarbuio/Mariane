@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCB - Localização | Modern Care Business</title>
+    <meta name="description" content="Conheça onde estamos localizados. MCB - Modern Care Business atende Curitiba e Ponta Grossa no Paraná.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="imagem/logo.jpg" alt="MCB Logo" class="logo-img">
+                    <span class="logo-text">MCB</span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Quem Somos <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index5.html">Fatores de Sucesso</a></li>
+                            <li><a href="index3.html">Fatores de Motivação</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Equipe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index2.html" class="nav-link active">Localização</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index1.html" class="nav-link">Nossos Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index6.html" class="nav-link">Contato</a>
+                    </li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="location-hero">
+        <div class="container">
+            <div class="location-hero-content">
+                <h1 class="location-title">
+                    <span class="location-title-main">Nossa Localização</span>
+                    <span class="location-title-sub">Atendemos o Paraná com Excelência</span>
+                </h1>
+                <p class="location-description">
+                    A MCB está presente em duas importantes cidades do Paraná, 
+                    oferecendo cursos de qualidade para profissionais de saúde em toda a região.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Main Section -->
+    <section class="location-main">
+        <div class="container">
+            <div class="location-grid">
+                <!-- Left Section - Information -->
+                <div class="location-info">
+                    <div class="location-card">
+                        <div class="location-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h2>Onde Estamos</h2>
+                        <p class="location-text">
+                            Somos uma empresa <strong>localizada no Paraná</strong>, 
+                            com presença em duas das principais cidades do estado.
+                        </p>
+                        
+                        <div class="cities-container">
+                            <div class="city-item">
+                                <div class="city-icon">
+                                    <i class="fas fa-city"></i>
+                                </div>
+                                <div class="city-info">
+                                    <h3>Curitiba</h3>
+                                    <p>Capital do Paraná</p>
+                                    <span class="city-detail">Centro de referência em saúde</span>
+                                </div>
+                            </div>
+                            
+                            <div class="city-item">
+                                <div class="city-icon">
+                                    <i class="fas fa-hospital"></i>
+                                </div>
+                                <div class="city-info">
+                                    <h3>Ponta Grossa</h3>
+                                    <p>Região dos Campos Gerais</p>
+                                    <span class="city-detail">Polo educacional e médico</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="location-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">2</span>
+                                <span class="stat-label">Cidades</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">Alunos</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Cobertura</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Section - Map -->
+                <div class="location-map">
+                    <div class="map-container">
+                        <div class="map-wrapper">
+                            <img src="imagem/Captura de tela 2025-03-17 155644.png" alt="Mapa do Brasil destacando o Paraná" class="map-image">
+                            
+                            <!-- Location Markers -->
+                            <div class="map-marker curitiba-marker" data-city="Curitiba">
+                                <div class="marker-dot"></div>
+                                <div class="marker-label">Curitiba</div>
+                            </div>
+                            
+                            <div class="map-marker ponta-grossa-marker" data-city="Ponta Grossa">
+                                <div class="marker-dot"></div>
+                                <div class="marker-label">Ponta Grossa</div>
+                            </div>
+                        </div>
+                        
+                        <div class="map-legend">
+                            <div class="legend-item">
+                                <div class="legend-dot curitiba"></div>
+                                <span>Curitiba - Capital</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-dot ponta-grossa"></div>
+                                <span>Ponta Grossa - Campos Gerais</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverage Section -->
+    <section class="coverage">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossa Cobertura</h2>
+                <p class="section-subtitle">Atendemos todo o Paraná com cursos online de qualidade</p>
+            </div>
+            
+            <div class="coverage-grid">
+                <div class="coverage-card">
+                    <div class="coverage-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Cursos Online</h3>
+                    <p>Acesse nossos cursos de qualquer lugar do Paraná através da nossa plataforma digital.</p>
+                </div>
+                
+                <div class="coverage-card">
+                    <div class="coverage-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Suporte Local</h3>
+                    <p>Equipe de suporte presente em Curitiba e Ponta Grossa para atendimento personalizado.</p>
+                </div>
+                
+                <div class="coverage-card">
+                    <div class="coverage-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certificação Reconhecida</h3>
+                    <p>Certificados válidos em todo o estado do Paraná e reconhecidos nacionalmente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="location-cta">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2>Quer saber mais sobre nossa localização?</h2>
+                    <p>Entre em contato conosco e descubra como podemos ajudar você a se desenvolver profissionalmente.</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="index6.html" class="btn btn-primary">
+                        <i class="fas fa-phone"></i>
+                        Fale Conosco
+                    </a>
+                    <a href="index1.html" class="btn btn-outline">
+                        <i class="fas fa-graduation-cap"></i>
+                        Ver Cursos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="imagem/logo.jpg" alt="MCB Logo" class="footer-logo-img">
+                        <span class="footer-logo-text">MCB</span>
+                    </div>
+                    <p class="footer-description">
+                        Modern Care Business - Excelência em educação para profissionais de saúde.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index1.html">Cursos</a></li>
+                        <li><a href="index2.html">Localização</a></li>
+                        <li><a href="index6.html">Contato</a></li>
+                        <li><a href="admin-cursos.html">Admin</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Institucional</h3>
+                    <ul class="footer-links">
+                        <li><a href="index5.html">Fatores de Sucesso</a></li>
+                        <li><a href="index3.html">Fatores de Motivação</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> contato@mcb.com.br</p>
+                        <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Paraná, Brasil</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 MCB - Modern Care Business. Todos os direitos reservados.</p>
+                <p class="footer-quote">
+                    <i class="fas fa-quote-left"></i>
+                    "Pois o Senhor é quem dá sabedoria; de sua boca procedem o conhecimento e o discernimento." 
+                    <span class="quote-reference">- Provérbio 2:6</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="javascript/js.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    background: url('path/to/hands-image.jpg') no-repeat center center / cover;
+    filter: blur(2px);
+    z-index: 0;
+}
+
+.title {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5em;
+    color: #8e44ad;
+    padding-top: 20px;
+    z-index: 2;
+    position: relative;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.central-circle {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #d8b2d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    z-index: 1;
+    text-shadow: 1px 1px 1px rgba(142, 68, 173, 0.5);
+}
+
+.sections {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 45%;
+    z-index: 2;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.icon {
+    width: 60px; /* Uniformizado */
+    height: 60px; /* Uniformizado */
+    border-radius: 50%;
+    background: #8e44ad;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5em; /* Ajustado para caber bem nos círculos */
+    margin-right: 15px;
+}
+
+.text {
+    color: #8e44ad;
+    font-size: 0.9em;
+    text-align: left;
+    line-height: 1.4;
+}
+
+.logo {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background: #8e44ad;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: url('path/to/curl.png') no-repeat;
+    z-index: 3;
+}

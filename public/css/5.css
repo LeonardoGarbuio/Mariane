@@ -1,0 +1,193 @@
+/* Estilo geral */
+body {
+    background-color: #f8f9fa; /* Fundo mais suave, um cinza claro */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Cor do texto mais suave */
+}
+
+/* Contêiner principal */
+.main-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Imagem de fundo */
+.background-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 850px;
+    height: auto;
+    object-fit: contain;
+    object-position: bottom right;
+    z-index: -1;
+    opacity: 0.9; /* Leve transparência para não competir com os cartões */
+}
+
+/* Cabeçalho */
+header {
+    padding: 30px; /* Aumentado para mais espaço */
+    padding-left: 10%;
+    text-align: left;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 42px; /* Aumentado para maior destaque */
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 1px; /* Espaçamento entre letras para elegância */
+}
+
+h1 .fatores-de {
+    color: #333; /* Cor mais suave */
+}
+
+h1 .sucesso {
+    color: #6f42c1; /* Roxo mais elegante */
+}
+
+.title-line {
+    position: absolute;
+    left: 630px;
+    right: 0;
+    height: 3px; /* Linha um pouco mais grossa */
+    background: linear-gradient(to right, #6f42c1, transparent); /* Gradiente para suavidade */
+    top: 50px;
+    z-index: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.line-end-image {
+    width: 50px;
+    height: 60px;
+    margin-right: 15px; /* Aumentado para mais espaço */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Contêiner externo dos cartões */
+.cards-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: calc(100% - 62px);
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+
+/* Contêiner dos cartões */
+.cards-container {
+    display: flex;
+    gap: 100px; /* Espaçamento mantido */
+    flex: 0 0 auto;
+    margin-left: 10%;
+    overflow-x: auto; /* Adicionado para rolagem horizontal, se necessário */
+    padding: 20px 0; /* Espaço vertical para melhor enquadramento */
+}
+
+/* Cartão */
+.card {
+    background-color: #f9f5ff; /* Fundo roxo claro para destacar */
+    border: 2px solid #6f42c1; /* Borda roxa */
+    border-radius: 15px; /* Bordas mais arredondadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
+    padding: 30px; /* Aumentado para mais espaço interno */
+    text-align: center; /* Centralizar todo o texto */
+    width: 300px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+}
+
+/* Círculo ao redor dos ícones */
+.icon-circle {
+    width: 50px; /* Aumentado para maior destaque */
+    height: 50px;
+    background-color: #6f42c1; /* Fundo roxo */
+    border: 3px solid #fff; /* Borda branca para contraste */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px; /* Centralizado com mais espaço abaixo */
+    color: #fff; /* Ícone branco */
+    font-size: 28px; /* Ícone maior */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Estilo do texto */
+h2 {
+    color: #6f42c1; /* Roxo */
+    font-weight: bold;
+    font-size: 20px; /* Aumentado para maior destaque */
+    margin: 15px 0; /* Mais espaço */
+    letter-spacing: 0.5px; /* Espaçamento entre letras */
+}
+
+p {
+    color: #333; /* Cor mais suave */
+    font-size: 16px; /* Aumentado para melhor legibilidade */
+    margin: 10px 0;
+    flex: 1;
+    overflow: hidden;
+    line-height: 1.5; /* Melhor espaçamento entre linhas */
+}
+
+/* Lista com marcadores personalizados */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    flex: 1;
+    overflow: hidden;
+    text-align: left; /* Lista alinhada à esquerda para melhor legibilidade */
+}
+
+li {
+    color: #333;
+    font-size: 16px; /* Aumentado para melhor legibilidade */
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    line-height: 1.5;
+}
+
+li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px; /* Marcador maior */
+    height: 8px;
+    background-color: #6f42c1; /* Roxo */
+    border-radius: 50%;
+}
